@@ -14,6 +14,6 @@ Para ejecutar el proyecto se debe usar el siguiente comando
 
 Este comando ejecutará tanto la página web de Reactjs, como el servidor de Nodejs. La página web estará en [localhost:3000](http://localhost:3000/) y el servidor en [localhost:3001](http://localhost:3001/)
 
-## Cualquier inquietud contartarme
+## Cualquier inquietud contactarme
 
 Daniel Lopez - dniel_lopez@hotmail.com
