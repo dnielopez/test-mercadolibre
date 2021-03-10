@@ -1,10 +1,16 @@
+/**
+ * Componente del buscador que se utiliza en todo
+ * el website para realizar las búsquedas de nuevos
+ * productos en ML
+ */
+
 import React from 'react'
+import { Store } from '../../hooks/main_store'
+import { Search } from '@material-ui/icons'
+import Logo from '../../assets/logo.png'
 import Box from '@material-ui/core/Box'
 import Model from '../../hooks/Model'
-import { Store } from '../../hooks/main_store'
-import Logo from '../../assets/logo.png'
 import useStyles from './styles'
-import { Search } from '@material-ui/icons'
 
 const SearchInput = ({
     customStyles = useStyles,

@@ -10,6 +10,11 @@ const SearchPage = ({ history }) => {
   const { state } = React.useContext(Store);
 
   const onSearch = async () => {
+    /**
+     * Se valida si el usuario si ingresó
+     * un valor en la búsqueda y se redirecciona
+     * al listado de productos
+     */
     try {
       if (state.searchTxt) {
         history.push(`/items?search=${state.searchTxt}`)

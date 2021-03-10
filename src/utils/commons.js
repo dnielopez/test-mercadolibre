@@ -26,6 +26,13 @@ const colors = {
   red: '#FF6663',
 }
 
+/**
+ * Función para darle el formato correcto al
+ * precio del producto
+ * @param {object} - Información del precio
+ * @return {string} Valor con formato
+ */
+
 const setCurrency = ({amount, decimals, currency = 'ARS'}) => {
   const formatter =  new Intl.NumberFormat('en-US', {
     style: 'currency',

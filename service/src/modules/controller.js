@@ -2,6 +2,15 @@
 const { api } = require('../api');
 const _ = require('lodash');
 
+/**
+ * Endpoint para obtener los resultados de
+ * la búsqueda de acuerdo al query que 
+ * ingresó el usuario
+ * @param {object} req 
+ * @param {object} res 
+ * @returns {object} El listado de items y categorías
+ */
+
 const getItems = async (req, res) => {
   try {
     let body = req.query || {};
@@ -40,6 +49,14 @@ const getItems = async (req, res) => {
     res.status(404).send({message: _.get(err, 'originalError', 'Error to get items')});
   }
 }
+
+/**
+ * Endpoint para obtener la información al detalle
+ * del producto a consultar
+ * @param {object} req 
+ * @param {object} res 
+ * @returns {object} El información y descripción del producto
+ */
 
 const getItem = async (req, res) => {
   try {
@@ -82,6 +99,15 @@ const getItem = async (req, res) => {
     res.status(404).send({message: _.get(err, 'originalError', 'Error to get item')});
   }
 }
+
+/**
+ * Endpoint para obtener las actegorías
+ * y poder formar los breadcrumbs en la web
+ * de acuerdo al producto seleccionado
+ * @param {object} req 
+ * @param {object} res 
+ * @returns {object} El listado categorías
+ */
 
 const getCategory = async (req, res) => {
   try {

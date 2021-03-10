@@ -1,3 +1,9 @@
+/**
+ * Item para mostrar la información de los
+ * productos en un listado con su
+ * correspondiente información
+ */
+
 import React from 'react'
 import { setCurrency } from '../../utils/commons'
 import Box from '@material-ui/core/Box'

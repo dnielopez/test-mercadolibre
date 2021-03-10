@@ -32,6 +32,10 @@ const DetailPage = ({ history }) => {
   }
 
   const getCategories = async (idCategory) => {
+    /**
+     * Esta función llama al endpoints para obtener
+     * las categorías y asi poder renderizar los breadcrumbs
+     */
     try {
       if (idCategory) {
         Model.setData('loading', true)
@@ -53,6 +57,12 @@ const DetailPage = ({ history }) => {
   }
 
   const onSearch = async () => {
+    /**
+     * Se hace el llamado al endpoint de ML
+     * para consultar la información del producto
+     * seleccionado y luego se hace el llamado
+     * a obtener las categorias
+     */
     try {
       if (id) {
         Model.setData('loading', true)
@@ -76,6 +86,11 @@ const DetailPage = ({ history }) => {
   }
 
   const onNewSearch = async () => {
+    /**
+     * Se valida si el usuario si ingresó
+     * un nuevo valor en la búsqueda y se redirecciona
+     * al listado de productos
+     */
     try {
       if (state.searchTxt) {
         history.push(`/items?search=${state.searchTxt}`)

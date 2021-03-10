@@ -1,3 +1,10 @@
+/**
+ * En esta vista se meustra el listado de
+ * los productos que se obtienen del endpoint
+ * de ML de acuerdo a la búsqueda ingresada por
+ * el usuario
+ */
+
 import React from 'react'
 import SearchInput from '../../components/searchInput'
 import ItemList from '../../components/itemList'
@@ -44,6 +51,11 @@ const ListPage = ({ history }) => {
   }
 
   const onSearch = async () => {
+    /**
+     * Función para realizar los llamados a los
+     * endpoints de ML para obtener los productos
+     * de acuerdo al query ingresado por el usuario
+     */
     try {
       if (state.searchTxt) {
         Model.setData('loading', true)
@@ -69,6 +81,7 @@ const ListPage = ({ history }) => {
   }
 
   const firstLoad = () => {
+    // Se obtiene el valor de búsqueda en la URL
     Model.setData('loading', true)
     const urlParams = new URLSearchParams(window.location.search);
     const searchParam = urlParams.get('search');

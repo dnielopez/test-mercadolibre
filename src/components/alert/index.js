@@ -1,20 +1,21 @@
+/**
+ * Componente que ayuda a mostrar los errores
+ * cuando el usuario tenga problemas con las
+ * consultas a los entpoints
+ */
+
 import React from 'react'
-import {Clear, CheckCircle, InfoRounded, WarningRounded, ErrorRounded} from '@material-ui/icons'
-import useStyles from './styles'
+import {Clear, InfoRounded, ErrorRounded} from '@material-ui/icons'
 import {Store} from '../../hooks/main_store'
 import { Box } from '@material-ui/core'
 import Model from '../../hooks/Model'
+import useStyles from './styles'
 
 const Alert = (props) => {
   const {state} = React.useContext(Store);
-  // const [timers, setTimers] = React.useState({});
   const styles = useStyles();
   const returnIcon = (item) => {
-    if (item.variant === 'success') {
-      return <CheckCircle className={styles.iconAlert} />
-    } else if (item.variant === 'warning') {
-      return <WarningRounded className={styles.iconAlert} />
-    }  else if (item.variant === 'error') {
+    if (item.variant === 'error') {
       return <ErrorRounded className={styles.iconAlert} />
     } else {
       return <InfoRounded className={styles.iconAlert} />

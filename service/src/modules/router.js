@@ -1,5 +1,11 @@
 'use strict'
 
+/**
+ * Definir los diferentes endpoints
+ * que podrá consultar los usuarios
+ * con su respectivo Middleware
+ */
+
 const MiddlewareAuth = require('../middlewareAuth');
 const UsersController = require('./controller');
 const express = require('express');

@@ -1,4 +1,11 @@
+/**
+ * Crear y exportar el API que funcionará
+ * para realizar los respectivos llamados
+ * a los endpoints con la URL de ML
+ */
+
 import { create } from 'apisauce'
+
 const api = create({
     baseURL: 'http://localhost:3001',
     headers: {

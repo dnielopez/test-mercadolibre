@@ -1,5 +1,10 @@
 import React from 'react';
-// import _ from 'lodash';
+/**
+ * Definir el estado inicial del Store y 
+ * declarar las acciones - reducers que se
+ * pueden utilizar en el website basado en
+ * los Hooks de React
+ */
 
 export const Store = React.createContext();
 const initialState = {

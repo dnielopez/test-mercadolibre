@@ -1,3 +1,9 @@
+/**
+ * Crear y exportar el API que funcionará
+ * para realizar los respectivos llamados
+ * a los endpoints con la URL de ML
+ */
+
 const { create } = require('apisauce')
 
 const api = create({
