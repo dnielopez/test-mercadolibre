@@ -8,7 +8,9 @@ En el presente proyecto se expone un desarrollo para la prueba planteada en la c
 
 ## Scripts disponibles
 
-Para ejecutar el proyecto se debe usar el siguiente comando
+Para ejecutar el proyecto se debe usar los siguientes comandos
+
+### `yarn install`
 
 ### `yarn start`
 
